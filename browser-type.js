@@ -48,7 +48,7 @@ export default function BrowserType() {
 	// 平台
 	let platform = "unknow";
 	if (system === "windows" || system === "osx" || system === "linux") {
-		platform = "decktop"; // 桌面端
+		platform = "desktop"; // 桌面端
 	} else if (system === "android" || system === "ios" || testUa(/mobile/ig)) {
 		platform = "mobile"; // 移动端
 	}
@@ -131,7 +131,7 @@ export default function BrowserType() {
 	return Object.assign({
 		engine, // webkit gecko presto trident
 		engineVs,
-		platform, // decktop mobile
+		platform, // desktop mobile
 		supporter, // chrome safari firefox opera iexplore edge
 		supporterVs,
 		system, // windows osx linux android ios
