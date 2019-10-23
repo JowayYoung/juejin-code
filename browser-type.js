@@ -56,7 +56,7 @@ export default function BrowserType() {
 	// 内核和载体
 	let engine = "unknow";
 	let supporter = "unknow";
-	if (testUa(/applewebkit/g) && testUa(/safari/g)) {
+	if (testUa(/applewebkit/g)) {
 		engine = "webkit"; // webkit内核
 		if (testUa(/edge/g)) {
 			supporter = "edge"; // edge浏览器
@@ -64,7 +64,7 @@ export default function BrowserType() {
 			supporter = "opera"; // opera浏览器
 		} else if (testUa(/chrome/g)) {
 			supporter = "chrome"; // chrome浏览器
-		} else {
+		} else if (testUa(/safari/g)) {
 			supporter = "safari"; // safari浏览器
 		}
 	} else if (testUa(/gecko/g) && testUa(/firefox/g)) {
@@ -112,9 +112,9 @@ export default function BrowserType() {
 	} else if (testUa(/qqbrowser/g)) {
 		shell = "qq"; // QQ浏览器
 		shellVs = testVs(/qqbrowser\/[\d._]+/g);
-	} else if (testUa(/ubrowser/g)) {
+	} else if (testUa(/ucbrowser/g)) {
 		shell = "uc"; // UC浏览器
-		shellVs = testVs(/ubrowser\/[\d._]+/g);
+		shellVs = testVs(/ucbrowser\/[\d._]+/g);
 	} else if (testUa(/qihu 360se/g)) {
 		shell = "360"; // 360浏览器(无版本)
 	} else if (testUa(/2345explorer/g)) {
