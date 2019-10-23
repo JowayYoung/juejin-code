@@ -7,7 +7,7 @@ export default function BrowserType() {
 		.replace(/[^0-9|_.]/g, "")
 		.replace(/_/g, ".");
 	// 系统
-	let system = "unknown";
+	let system = "unknow";
 	if (testUa(/windows|win32|win64|wow32|wow64/g)) {
 		system = "windows"; // windows系统
 	} else if (testUa(/macintosh|macintel/g)) {
@@ -20,7 +20,7 @@ export default function BrowserType() {
 		system = "ios"; // ios系统
 	}
 	// 系统版本
-	let systemVs = "unknown";
+	let systemVs = "unknow";
 	if (system === "windows") {
 		if (testUa(/windows nt 5.0|windows 2000/g)) {
 			systemVs = "2000";
