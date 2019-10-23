@@ -127,9 +127,6 @@ export default function BrowserType() {
 	} else if (testUa(/maxthon/g)) {
 		shell = "maxthon"; // 遨游浏览器
 		shellVs = testVs(/maxthon\/[\d._]+/g);
-	} else if (testUa(/bidubrowser/g)) {
-		shell = "baidu"; // 百度浏览器
-		shellVs = testVs(/bidubrowser [\d._]+/g);
 	}
 	return Object.assign({
 		engine, // webkit gecko presto trident
@@ -140,7 +137,7 @@ export default function BrowserType() {
 		system, // windows macos linux android ios
 		systemVs
 	}, shell === "none" ? {} : {
-		shell, // wechat qq uc 360 2345 sougou liebao maxthon baidu
+		shell, // wechat qq uc 360 2345 sougou liebao maxthon
 		shellVs
 	});
 }
