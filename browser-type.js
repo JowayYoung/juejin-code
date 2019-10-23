@@ -140,7 +140,7 @@ export default function BrowserType() {
 		system, // windows macos linux android ios
 		systemVs
 	}, shell === "none" ? {} : {
-		shell, // wechat qq uc 2345 sougou liebao maxthon baidu
+		shell, // wechat qq uc 360 2345 sougou liebao maxthon baidu
 		shellVs
 	});
 }
