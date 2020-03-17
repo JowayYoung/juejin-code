@@ -1,7 +1,7 @@
 function RecursionPromise(nextPromise, x, resolve, reject) {
 	if (nextPromise === x) return false;
 	let flag;
-	if ((x !== null) && (typeof x === "object" || typeof x === "function")) {
+	if (x !== null && (typeof x === "object" || typeof x === "function")) {
 		try {
 			let then = x.then;
 			if (typeof then === "function") {
@@ -91,3 +91,5 @@ class MyPromise {
 		return nextPromise;
 	}
 }
+
+export default MyPromise;
