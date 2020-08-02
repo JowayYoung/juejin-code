@@ -1,0 +1,14 @@
+{
+	"name": "compress-img",
+	"version": "1.0.0",
+	"description": "",
+	"scripts": {
+		"start": "node src/index.js"
+	},
+	"dependencies": {
+		"chalk": "4.1.0",
+		"figures": "3.2.0",
+		"ora": "4.0.5",
+		"trample": "0.2.3"
+	}
+}
