@@ -65,7 +65,7 @@ async function CompressImg(path) {
 		const oldSize = Chalk.redBright(ByteSize(obj.input.size));
 		const newSize = Chalk.greenBright(ByteSize(obj.output.size));
 		const ratio = Chalk.blueBright(RoundNum(1 - obj.output.ratio, 2, true));
-		const dpath = Path.join("dist", Path.basename(path));
+		const dpath = Path.join("img", Path.basename(path));
 		const msg = `${Figures.tick} Compressed [${Chalk.yellowBright(path)}] completed: Old Size ${oldSize}, New Size ${newSize}, Optimization Ratio ${ratio}`;
 		Fs.writeFileSync(dpath, data, "binary");
 		return Promise.resolve(msg);
