@@ -1,0 +1,646 @@
+body {
+	overflow: hidden;
+	height: 100vh;
+}
+// 全屏布局
+// .fullscreen-layout {
+//     position: relative;
+//     width: 400px;
+//     height: 400px;
+//     header,
+//     footer,
+//     main {
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//     }
+//     header {
+//         top: 0;
+//         height: 50px;
+//         background-color: #f66;
+//     }
+//     footer {
+//         bottom: 0;
+//         height: 50px;
+//         background-color: #66f;
+//     }
+//     main {
+//         top: 50px;
+//         bottom: 50px;
+//         background-color: #3c9;
+//     }
+// }
+.fullscreen-layout {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 400px;
+	header {
+		height: 50px;
+		background-color: #f66;
+	}
+	footer {
+		height: 50px;
+		background-color: #66f;
+	}
+	main {
+		flex: 1;
+		background-color: #3c9;
+	}
+}
+// 两列布局
+// .two-column-layout {
+//     width: 400px;
+//     height: 400px;
+//     .left {
+//         float: left;
+//         width: 100px;
+//         height: 100%;
+//         background-color: #f66;
+//     }
+//     .right {
+//         margin-left: 100px;
+//         height: 100%;
+//         background-color: #66f;
+//     }
+// }
+// .two-column-layout {
+//     width: 400px;
+//     height: 400px;
+//     .left {
+//         float: left;
+//         width: 100px;
+//         height: 100%;
+//         background-color: #f66;
+//     }
+//     .right {
+//         overflow: hidden;
+//         height: 100%;
+//         background-color: #66f;
+//     }
+// }
+.two-column-layout {
+	display: flex;
+	width: 400px;
+	height: 400px;
+	.left {
+		width: 100px;
+		background-color: #f66;
+	}
+	.right {
+		flex: 1;
+		background-color: #66f;
+	}
+}
+// 三列布局
+// .three-column-layout {
+//     width: 400px;
+//     height: 400px;
+//     .left {
+//         float: left;
+//         width: 50px;
+//         height: 100%;
+//         background-color: #f66;
+//     }
+//     .center {
+//         float: left;
+//         width: 100px;
+//         height: 100%;
+//         background-color: #66f;
+//     }
+//     .right {
+//         overflow: hidden;
+//         height: 100%;
+//         background-color: #3c9;
+//     }
+// }
+.three-column-layout {
+	display: flex;
+	width: 400px;
+	height: 400px;
+	.left {
+		width: 50px;
+		background-color: #f66;
+	}
+	.center {
+		width: 100px;
+		background-color: #66f;
+	}
+	.right {
+		flex: 1;
+		background-color: #3c9;
+	}
+}
+// 圣杯布局与双飞翼布局
+.grail-layout-x {
+	padding: 0 100px;
+	width: 400px;
+	height: 400px;
+	.left {
+		float: left;
+		margin-left: -100px;
+		width: 100px;
+		height: 100%;
+		background-color: #f66;
+	}
+	.right {
+		float: right;
+		margin-right: -100px;
+		width: 100px;
+		height: 100%;
+		background-color: #66f;
+	}
+	.center {
+		height: 100%;
+		background-color: #3c9;
+	}
+}
+.grail-layout-y {
+	width: 400px;
+	height: 400px;
+	.left {
+		float: left;
+		width: 100px;
+		height: 100%;
+		background-color: #f66;
+	}
+	.right {
+		float: right;
+		width: 100px;
+		height: 100%;
+		background-color: #66f;
+	}
+	.center {
+		margin: 0 100px;
+		height: 100%;
+		background-color: #3c9;
+	}
+}
+.grail-layout {
+	display: flex;
+	width: 400px;
+	height: 400px;
+	.left {
+		width: 100px;
+		background-color: #f66;
+	}
+	.center {
+		flex: 1;
+		background-color: #3c9;
+	}
+	.right {
+		width: 100px;
+		background-color: #66f;
+	}
+}
+// 均分布局
+.one {
+	background-color: #f66;
+}
+.two {
+	background-color: #66f;
+}
+.three {
+	background-color: #f90;
+}
+.four {
+	background-color: #09f;
+}
+// .average-layout {
+//     width: 400px;
+//     height: 400px;
+//     div {
+//         float: left;
+//         width: 25%;
+//         height: 100%;
+//     }
+// }
+.average-layout {
+	display: flex;
+	width: 400px;
+	height: 400px;
+	div {
+		flex: 1;
+	}
+}
+// 居中布局
+.center-layout {
+	display: flex;
+	width: 400px;
+	height: 400px;
+	background-color: #f66;
+	div {
+		margin: auto;
+		width: 100px;
+		height: 100px;
+		background-color: #66f;
+	}
+}
+// 三角形
+.triangle {
+	border: 50px solid transparent;
+	width: 0;
+	height: 0;
+	& + .triangle {
+		margin-left: 50px;
+	}
+	&.left {
+		border-right-color: #f66;
+	}
+	&.right {
+		border-left-color: #f66;
+	}
+	&.top {
+		border-bottom-color: #f66;
+	}
+	&.bottom {
+		border-top-color: #f66;
+	}
+	&.left-top {
+		border-left-color: #f66;
+		border-top-color: #f66;
+	}
+	&.left-bottom {
+		border-left-color: #f66;
+		border-bottom-color: #f66;
+	}
+	&.right-top {
+		border-right-color: #f66;
+		border-top-color: #f66;
+	}
+	&.right-bottom {
+		border-right-color: #f66;
+		border-bottom-color: #f66;
+	}
+}
+// 条形加载条
+.strip-loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 200px;
+	li {
+		--time: calc((var(--line-index) - 1) * 200ms);
+		border-radius: 3px;
+		width: 6px;
+		height: 30px;
+		background-color: #f66;
+		animation: beat 1.5s ease-in-out var(--time) infinite;
+		& + li {
+			margin-left: 5px;
+		}
+		// &:nth-child(2) {
+		//     animation-delay: 200ms;
+		// }
+		// &:nth-child(3) {
+		//     animation-delay: 400ms;
+		// }
+		// &:nth-child(4) {
+		//     animation-delay: 600ms;
+		// }
+		// &:nth-child(5) {
+		//     animation-delay: 800ms;
+		// }
+		// &:nth-child(6) {
+		//     animation-delay: 1s;
+		// }
+	}
+}
+@keyframes beat {
+	0%,
+	100% {
+		transform: scaleY(1);
+	}
+	50% {
+		transform: scaleY(.5);
+	}
+}
+// 渐变圆形
+.gradient-circular {
+	position: relative;
+	margin-bottom: 200px;
+	width: 4px;
+	height: 200px;
+	li {
+		--Θ: calc(var(--line-index) / var(--line-count) * 1turn);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #3c9;
+		filter: hue-rotate(var(--Θ));
+		transform-origin: center bottom;
+		transform: rotate(var(--Θ));
+	}
+}
+// 气泡对话框
+.bubble-box {
+    position: relative;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    background-color: #f90;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    &::after {
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin-top: -5px;
+        border: 5px solid transparent;
+        border-left-color: #f90;
+        content: "";
+    }
+}
+// 带边框气泡对话框
+.bubble-empty-box {
+    position: relative;
+    border: 2px solid #f90;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    line-height: 46px;
+    text-align: center;
+    font-size: 20px;
+    color: #f90;
+    &::before {
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin: -5px 0 0 2px;
+        border: 5px solid transparent;
+        border-left-color: #f90;
+        content: "";
+    }
+    &::after {
+        position: absolute;
+        left: 100%;
+        top: 50%;
+        margin-top: -4px;
+        border: 4px solid transparent;
+        border-left-color: #fff;
+        content: "";
+    }
+}
+// 动感心形
+.heart-shape {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-color: #f66;
+	transform: rotate(45deg);
+	&::before,
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 100%;
+		width: 100%;
+		height: 100%;
+		background-color: #f66;
+		content: "";
+	}
+	&::before {
+		transform: translateX(-50%);
+	}
+	&::after {
+		transform: translateY(-50%);
+	}
+}
+// 动感渐变心形
+.gradient-heart-shape {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	background-image: linear-gradient(to bottom, #09f, #f66);
+	box-shadow: 0 0 20px rgba(#000, .8);
+	transform: rotate(45deg);
+	&::before,
+	&::after {
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-radius: 100%;
+		width: 100%;
+		height: 100%;
+		content: "";
+	}
+	&::before {
+		background-image: linear-gradient(to bottom, #09f, #f66);
+		transform: translateX(-50%);
+	}
+	&::after {
+		background-image: linear-gradient(to bottom, #3c9, #09f 50%, transparent 50%, transparent);
+		transform: translateY(-50%);
+	}
+}
+// 悬浮提示
+$color-list: #f66 #66f #f90 #09f #9c3 #3c9;
+.hover-tips {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    li {
+        position: relative;
+        padding: 2px;
+        border: 2px solid transparent;
+        border-radius: 100%;
+        width: 24px;
+        height: 24px;
+        background-clip: content-box;
+        cursor: pointer;
+        transition: all 300ms;
+        &::before,
+        &::after {
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            opacity: 0;
+            transform: translate3d(0, -30px, 0);
+            transition: all 300ms;
+        }
+        &::before {
+            margin: 0 0 12px -35px;
+            border-radius: 5px;
+            width: 70px;
+            height: 30px;
+            background-color: rgba(#000, .5);
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            content: attr(data-name);
+        }
+        &::after {
+            margin-left: -6px;
+            border: 6px solid transparent;
+            border-top-color: rgba(#000, .5);
+            width: 0;
+            height: 0;
+            content: "";
+        }
+        @each $color in $color-list {
+            $index: index($color-list, $color);
+            &:nth-child(#{$index}) {
+                background-color: $color;
+                &:hover {
+                    border-color: $color;
+                }
+            }
+        }
+        &:hover {
+            &::before,
+            &::after {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+    }
+}
+// 状态悬浮球
+.state-ball {
+	overflow: hidden;
+	position: relative;
+	padding: 5px;
+	border: 3px solid #3c9;
+	border-radius: 100%;
+	width: 150px;
+	height: 150px;
+	background-color: #fff;
+	&::before,
+	&::after {
+		position: absolute;
+		left: 50%;
+		bottom: 5px;
+		z-index: 9;
+		margin-left: -100px;
+		width: 200px;
+		height: 200px;
+		content: "";
+	}
+	&::before {
+		margin-bottom: calc(var(--offset) * 1.34px);
+		border-radius: 45%;
+		background-color: rgba(#fff, .5);
+		animation: rotate 10s linear -5s infinite;
+	}
+	&::after {
+		margin-bottom: calc(var(--offset) * 1.34px + 10px);
+		border-radius: 40%;
+		background-color: rgba(#fff, .8);
+		animation: rotate 15s infinite;
+	}
+	.wave {
+		position: relative;
+		border-radius: 100%;
+		width: 100%;
+		height: 100%;
+		background-image: linear-gradient(to bottom, #af8 13%, #3c9 91%);
+	}
+	.progress::after {
+		display: flex;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 99;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		font-weight: bold;
+		font-size: 16px;
+		color: #09f;
+		content: counter(progress) "%";
+		counter-reset: progress var(--offset);
+	}
+}
+@keyframes rotate {
+	to {
+		transform: rotate(1turn);
+	}
+}
+// 标签导航
+.active {
+	background-color: #3c9;
+	color: #fff;
+}
+.tab-navbar {
+	display: flex;
+	overflow: hidden;
+	flex-direction: column-reverse;
+	border-radius: 10px;
+	width: 300px;
+	height: 400px;
+	input {
+		&:nth-child(1):checked {
+			& ~ nav label:nth-child(1) {
+				@extend .active;
+			}
+			& ~ main ul {
+				background-color: #f66;
+				transform: translate3d(0, 0, 0);
+			}
+		}
+		&:nth-child(2):checked {
+			& ~ nav label:nth-child(2) {
+				@extend .active;
+			}
+			& ~ main ul {
+				background-color: #66f;
+				transform: translate3d(-25%, 0, 0);
+			}
+		}
+		&:nth-child(3):checked {
+			& ~ nav label:nth-child(3) {
+				@extend .active;
+			}
+			& ~ main ul {
+				background-color: #f90;
+				transform: translate3d(-50%, 0, 0);
+			}
+		}
+		&:nth-child(4):checked {
+			& ~ nav label:nth-child(4) {
+				@extend .active;
+			}
+			& ~ main ul {
+				background-color: #09f;
+				transform: translate3d(-75%, 0, 0);
+			}
+		}
+	}
+	nav {
+		display: flex;
+		height: 40px;
+		background-color: #f0f0f0;
+		line-height: 40px;
+		text-align: center;
+		label {
+			flex: 1;
+			cursor: pointer;
+			transition: all 300ms;
+		}
+	}
+	main {
+		flex: 1;
+		ul {
+			display: flex;
+			flex-wrap: nowrap;
+			width: 400%;
+			height: 100%;
+			transition: all 300ms;
+		}
+		li {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 1;
+			font-weight: bold;
+			font-size: 20px;
+			color: #fff;
+		}
+	}
+}
